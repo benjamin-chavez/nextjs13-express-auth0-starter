@@ -1,16 +1,12 @@
 // client/src/components/navbar.tsx
-
-// frontend/app/components/navbar.tsx
 'use client';
-
-import clsx from 'clsx';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export type NavItem = {
-  name: string;
-};
+// export type NavItem = {
+//   name: string;
+// };
 
 const navItems = {
   nextLinks: [
@@ -33,7 +29,7 @@ export default function Navbar() {
   let pathname = usePathname();
 
   return (
-    <div>
+    <>
       <nav className="bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <div className="w-full md:block md:w-auto" id="navbar-default">
@@ -43,11 +39,11 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={clsx(
-                      'block rounded md:p-0 text-white hover:opacity-70',
-
-                      item.href === pathname ? 'text-red-500' : 'text-white'
-                    )}
+                    className={
+                      item.href === pathname
+                        ? 'block rounded md:p-0 hover:opacity-70 text-pink-500'
+                        : 'block rounded md:p-0 hover:opacity-70 text-white'
+                    }
                   >
                     {item.name}
                   </Link>
@@ -57,6 +53,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
