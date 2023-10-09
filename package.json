@@ -1,0 +1,17 @@
+{
+  "name": "auth0-nextjs-starter-for-blog-post",
+  "version": "1.0.0",
+  "description": "## Add Authentication to Nex.js Frontend",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && pnpm run dev",
+    "server": "cd server && pnpm run start",
+    "dev": "concurrently \"pnpm run client\" \"pnpm run server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
