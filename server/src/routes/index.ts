@@ -18,4 +18,11 @@ router.get(
   })
 );
 
+router.get(
+  '/private',
+  asyncHandler(async (req, res, next) => {
+    res.status(200).send({ message: 'This is a private route' });
+  })
+);
+
 export default router;
